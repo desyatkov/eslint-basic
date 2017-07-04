@@ -9,6 +9,9 @@
     },
     "extends": "eslint:recommended",
     "plugins": ["compat", "html"],
+    "settings": {
+        "html/html-extensions": [".html"]
+    },
     "rules": {
         "compat/compat": 2,
         "indent": [ "error", 4 ],

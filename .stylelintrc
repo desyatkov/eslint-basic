@@ -1,5 +1,6 @@
 {
   "plugins": ["stylelint-no-unsupported-browser-features"],
+  "processors": ["stylelint-processor-html"],
   "rules": {
     "plugin/no-unsupported-browser-features": [true, {
       "browsers": ["> 1%", "Last 2 versions"],

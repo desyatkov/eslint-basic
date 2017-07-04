@@ -11,14 +11,25 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.css": "stylelint",
+    "*.scss": [
+      "stylefmt",
+      "stylelint --syntax scss",
+      "git add"
+    ],
+    "*.html": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.html": "stylelint"
   },
   "browserslist": [
     "ie 8"
   ],
-  "quokka": {
-    "babel": true
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -38,11 +49,13 @@
     "husky": "^0.14.1",
     "lint-staged": "^4.0.0",
     "npm-run-all": "^4.0.2",
-    "stylelint-no-unsupported-browser-features": "^1.0.0"
+    "stylelint-no-unsupported-browser-features": "^1.0.0",
+    "stylelint-processor-html": "1.0.0"
   },
   "dependencies": {
     "babel": "^6.23.0",
     "eslint-plugin-html": "^3.0.0",
+    "stylefmt": "^6.0.0",
     "stylelint": "^7.12.0"
   }
 }
