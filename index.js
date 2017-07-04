@@ -2,6 +2,7 @@
 var a = 'from';
 
 function helloyou(str) {
+    jQuery('a');
     return str;
 }
 
