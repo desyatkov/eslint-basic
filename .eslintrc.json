@@ -1,0 +1,51 @@
+{
+    "env": {
+        "browser": true,
+        "es6": false,
+        "jquery": true
+    },
+    "globals": {
+        "u": true
+    },
+    "extends": "eslint:recommended",
+    "plugins": ["compat", "html"],
+    "rules": {
+        "compat/compat": 2,
+        "indent": [ "error", 4 ],
+        // "execWhenReady": 2,
+        // "cdnUrl": 2,
+        // "jQuery-usage": 2,
+        // "ie8-support": 1,
+        // "meaningful-naming": 2,
+        // "parameter-length": 2,
+        "yoda": "error",
+        "no-new-func": "error",
+        "max-nested-callbacks": ["error", 3],
+        "eqeqeq": ["error", "always"],
+        "camelcase": ["error", { "properties": "always" }],
+        "no-self-compare": "error",
+        "no-new-object": "error",
+        "linebreak-style": [ "error", "unix" ],
+        "quotes": [ "error", "single" ],
+        "semi": [ "error", "always" ],
+        "complexity": ["error", 2],
+        "no-debugger": "error",
+        "no-delete-var": "error",
+        "no-dupe-args": "error",
+        "no-dupe-class-members": "error",
+        "no-dupe-keys": "error",
+        "no-duplicate-case": "error",
+        "no-empty-character-class": "error",
+        "no-empty-pattern": "error",
+        "no-eval": "error",
+        "no-mixed-operators": ["error", {
+            "groups": [
+                ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
+                ["&&", "||"],
+                ["in", "instanceof"]
+            ],
+            "allowSamePrecedence": true
+            }],
+        "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }]    
+    }
+}

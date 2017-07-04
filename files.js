@@ -1,0 +1,2 @@
+var unusedVariable = false;
+$(unusedVariable);
