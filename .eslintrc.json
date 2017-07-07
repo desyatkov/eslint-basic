@@ -7,20 +7,25 @@
     "globals": {
         "u": true
     },
-    "extends": "eslint:recommended",
-    "plugins": ["compat", "html"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:lodash/recommended",
+        "plugin:ni-ps-lint/recommended"
+    ],
+    "plugins": [
+        "ni-ps-lint",
+        "compat",
+        "html",
+        "lodash",
+        "optimize-regex"
+    ],
     "settings": {
         "html/html-extensions": [".html"]
     },
     "rules": {
         "compat/compat": 2,
+        "optimize-regex/optimize-regex": "warn",
         "indent": [ "error", 4 ],
-        // "execWhenReady": 2,
-        // "cdnUrl": 2,
-        // "jQuery-usage": 2,
-        // "ie8-support": 1,
-        // "meaningful-naming": 2,
-        // "parameter-length": 2,
         "yoda": "error",
         "no-new-func": "error",
         "max-nested-callbacks": ["error", 3],

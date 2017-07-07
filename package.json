@@ -8,21 +8,22 @@
     "lint:js": "node_modules/.bin/eslint --fix ./",
     "lint:css": "node_modules/.bin/stylelint '**/*.scss' --syntax scss",
     "test": "npm-run-all lint:*",
+    "stat": "node_modules/.bin/eslint --format node_modules/eslint-stats/byError.js *.js",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": [
+    "*.{js,html}": [
       "eslint --fix",
       "git add"
     ],
-    "*.css": "stylelint",
+    "*.css": [
+      "stylefmt",
+      "stylelint",
+      "git add"
+    ],
     "*.scss": [
       "stylefmt",
       "stylelint --syntax scss",
-      "git add"
-    ],
-    "*.html": [
-      "eslint --fix",
       "git add"
     ],
     "*.html": "stylelint"
@@ -34,20 +35,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.1.0",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-preset-env": "^1.5.2",
-    "babel-preset-es2016": "^6.24.1",
-    "babel-preset-flow": "^6.23.0",
-    "babel-preset-stage-0": "^6.24.1",
-    "eslint": "^4.0.0",
-    "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-plugin-compat": "^1.0.3",
-    "eslint-plugin-import": "^2.3.0",
-    "husky": "^0.14.1",
-    "lint-staged": "^4.0.0",
+    "eslint": "^4.1.1",
+    "eslint-plugin-compat": "^1.0.4",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-ni-ps-lint": "^1.0.2",
+    "eslint-plugin-optimize-regex": "^1.1.2",
+    "eslint-stats": "^1.0.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.1",
     "npm-run-all": "^4.0.2",
     "stylelint-no-unsupported-browser-features": "^1.0.0",
     "stylelint-processor-html": "1.0.0"
@@ -55,6 +50,7 @@
   "dependencies": {
     "babel": "^6.23.0",
     "eslint-plugin-html": "^3.0.0",
+    "eslint-plugin-lodash": "^2.4.3",
     "stylefmt": "^6.0.0",
     "stylelint": "^7.12.0"
   }
