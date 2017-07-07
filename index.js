@@ -1,9 +1,9 @@
 // Shallow-clone an object:
-var a = 'from';
+var aaa = 'from';
 
-function helloyou(str) {
-    jQuery('a');
-    return str;
+function helloyou(bee) {
+    jQuery('a').hello();
+    return bee;
 }
 
-helloyou(a);
+helloyou(aaa);
