@@ -29,29 +29,26 @@
     "*.html": "stylelint"
   },
   "browserslist": [
+    "last 4 versions",
     "ie 8"
   ],
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^4.1.1",
-    "eslint-plugin-compat": "^1.0.4",
+    "eslint": "^4.2.0",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-ni-ps-lint": "^1.0.2",
-    "eslint-plugin-optimize-regex": "^1.1.2",
     "eslint-stats": "^1.0.0",
     "husky": "^0.14.3",
     "lint-staged": "^4.0.1",
     "npm-run-all": "^4.0.2",
     "stylelint-no-unsupported-browser-features": "^1.0.0",
-    "stylelint-processor-html": "1.0.0"
+    "stylelint-processor-html": "1.0.0",
+    "eslint-plugin-ni-ps-lint": "^1.1.1"
   },
   "dependencies": {
     "babel": "^6.23.0",
-    "eslint-plugin-html": "^3.0.0",
-    "eslint-plugin-lodash": "^2.4.3",
     "stylefmt": "^6.0.0",
-    "stylelint": "^7.12.0"
+    "stylelint": "^7.13.0"
   }
 }
